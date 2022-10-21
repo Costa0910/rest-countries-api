@@ -7,7 +7,8 @@ import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
 import "./index.css";
 import App from "./App";
 import Home from "./components/home/Home";
-import Test from "./components/Test";
+import { Provider } from "react-redux";
+import { store } from "../src/app/store";
 
 const router = createBrowserRouter([
   {
@@ -19,18 +20,16 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      {
-        path: ":testId",
-        element: <Test />,
-      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ApiProvider api={allCountries}>
-      <RouterProvider router={router} />
-    </ApiProvider>
+    <Provider store={store}>
+      <ApiProvider api={allCountries}>
+        <RouterProvider router={router} />
+      </ApiProvider>
+    </Provider>
   </React.StrictMode>
 );
