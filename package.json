@@ -9,9 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.4",
+    "redux": "^4.2.0",
     "reset-css": "^5.0.1",
+    "styled-components": "^5.3.6",
     "the-new-css-reset": "^1.7.3"
   },
   "devDependencies": {
