@@ -3,7 +3,9 @@ const Navbar = () => {
   return (
     <NavbarStyle>
       <h1>Where in the World?</h1>
-      <div>Dark Mode</div>
+      <div>
+        <span className="material-symbols-outlined">dark_mode</span>Dark Mode
+      </div>
     </NavbarStyle>
   );
 };

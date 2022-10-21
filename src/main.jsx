@@ -26,10 +26,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ApiProvider api={allCountries}>
+    <ApiProvider api={allCountries}>
+      <Provider store={store}>
         <RouterProvider router={router} />
-      </ApiProvider>
-    </Provider>
+      </Provider>
+    </ApiProvider>
   </React.StrictMode>
 );
