@@ -1,6 +1,13 @@
 // import { useGetAllCountriesQuery } from "../../features/api/apiSlice";
+// import { useSelector } from "react-redux";
+import Main, { Search, SectionCountries } from "./home-style";
+import Input from "./input/Input";
+import Filter from "./filter/Filter";
 
 const Home = () => {
+  // const { witchMode, darkMode, lightMode } = useSelector(
+  //   (state) => state.theme
+  // );
   // const {
   //   data: countries,
   //   isLoading,
@@ -13,7 +20,15 @@ const Home = () => {
   // console.log(isError);
   // console.log(error);
   // console.log(countries);
-  return <h1>Home</h1>;
+  return (
+    <Main>
+      <Search>
+        <Input />
+        <Filter />
+      </Search>
+      <SectionCountries>all countries</SectionCountries>
+    </Main>
+  );
 };
 
 export default Home;

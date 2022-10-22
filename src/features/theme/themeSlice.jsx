@@ -7,7 +7,7 @@ const initialState = {
     background: "hsl(207, 26%, 17%)",
     elements: "hsl(209, 23%, 22%)",
     text: "hsl(0, 0%, 100%)",
-    input: "hsl(0, 0%, 52%)",
+    input: "hsl(0, 0%, 100%)",
   },
   lightMode: {
     background: " hsl(0, 0%, 98%)",
@@ -18,7 +18,7 @@ const initialState = {
 };
 
 export const themeSlice = createSlice({
-  name: "counter",
+  name: "theme",
   initialState,
   reducers: {
     changeMode: (state) => {

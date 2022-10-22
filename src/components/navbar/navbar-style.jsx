@@ -5,7 +5,8 @@ const NavbarStyle = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: inherit;
+  color: ${(props) => props.mode.text};
+  background: ${(props) => props.mode.elements};
   -webkit-box-shadow: 30px 1px 36px -1px rgba(0, 0, 0, 0.17);
   box-shadow: 30px 1px 36px -1px rgba(0, 0, 0, 0.17);
 
