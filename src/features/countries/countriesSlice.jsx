@@ -22,10 +22,14 @@ export const countriesSlice = createSlice({
     setStateOfFetching: (state, { payload }) => {
       state.stateOfFetching = payload;
     },
+    getStartData: (state) => {
+      // get initial 8 countries
+      state.countriesToDisplay = state.allCountries.slice(0, 8);
+    },
   },
 });
 
-export const { setCountriesToStore, setStateOfFetching } =
+export const { setCountriesToStore, setStateOfFetching, getStartData } =
   countriesSlice.actions;
 
 export default countriesSlice.reducer;

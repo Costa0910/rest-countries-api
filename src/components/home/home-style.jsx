@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const Main = styled.main`
-  border: 1px solid red;
   padding: 2rem;
 `;
 
@@ -16,7 +15,10 @@ export const Search = styled.div`
 `;
 
 export const SectionCountries = styled.section`
-  border: 1px solid violet;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
 `;
 
 export default Main;

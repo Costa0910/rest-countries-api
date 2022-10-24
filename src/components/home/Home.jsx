@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import Main, { Search, SectionCountries } from "./home-style";
 import Input from "./input/Input";
 import Filter from "./filter/Filter";
+import Country from "./country/Country";
 // import setupStore from "./SetupStore/SetupStore";
 
 const Home = () => {
@@ -18,8 +19,14 @@ const Home = () => {
         <Filter />
       </Search>
       {isLoading && <h1>Loading</h1>}
-      {isSuccess && <SectionCountries>all countries</SectionCountries>}
       {isError && <h1>Error, {error.toString()}</h1>}
+      {isSuccess && (
+        <SectionCountries>
+          {countriesToDisplay.map((country) => (
+            <Country key={country.id} country={country} />
+          ))}
+        </SectionCountries>
+      )}
     </Main>
   );
 };

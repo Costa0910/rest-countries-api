@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useGetAllCountriesQuery } from "./features/api/apiSlice";
 import { useEffect } from "react";
 import {
+  getStartData,
   setCountriesToStore,
   setStateOfFetching,
 } from "../src/features/countries/countriesSlice";
@@ -27,6 +28,7 @@ function App() {
       const organizedData = organizeData(data);
       dispatch(setStateOfFetching({ isLoading, isSuccess, isError, error }));
       dispatch(setCountriesToStore(organizedData));
+      dispatch(getStartData());
       console.log("done");
     }
   }, [isLoading]);
