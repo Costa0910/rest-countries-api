@@ -14,9 +14,16 @@ const Article = styled.article`
     width: 100%;
     height: 45%;
     background: url(${(props) => props.bg});
+    -moz-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 2px;
   }
 
   .details {

@@ -28,7 +28,7 @@ const Filter = () => {
           ...theme,
           borderRadius: 3,
           colors: {
-            neutral0: witchMode ? darkMode.background : lightMode.background,
+            neutral0: witchMode ? darkMode.elements : lightMode.elements,
           },
         })}
       />

@@ -2,8 +2,16 @@ import styled from "styled-components";
 
 const Main = styled.main`
   padding: 2rem;
+  /* allow me to center loader */
+  display: flex;
+  flex-direction: column;
 
-  @media screen and (max-width: 640px){
+  /* loader */
+  .lds-ellipsis {
+    align-self: center;
+  }
+
+  @media screen and (max-width: 640px) {
     padding: 2rem 0;
   }
 `;
@@ -17,7 +25,7 @@ export const Search = styled.div`
   font-size: 14px;
   font-weight: 600;
 
-  @media screen and (max-width: 640px){
+  @media screen and (max-width: 640px) {
     padding: 0 1rem;
     height: fit-content;
     flex-direction: column;

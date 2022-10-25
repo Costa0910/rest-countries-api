@@ -1,10 +1,9 @@
 import { useSelector } from "react-redux";
-// import { useEffect, useState } from "react";
 import Main, { Search, SectionCountries } from "./home-style";
 import Input from "./input/Input";
 import Filter from "./filter/Filter";
 import Country from "./country/Country";
-// import setupStore from "./SetupStore/SetupStore";
+import Spinner from "./spinner/Spinner";
 
 const Home = () => {
   const { countriesToDisplay, stateOfFetching } = useSelector(
@@ -18,7 +17,7 @@ const Home = () => {
         <Input />
         <Filter />
       </Search>
-      {isLoading && <h1>Loading</h1>}
+      {isLoading && <Spinner />}
       {isError && <h1>Error, {error.toString()}</h1>}
       {isSuccess && (
         <SectionCountries>

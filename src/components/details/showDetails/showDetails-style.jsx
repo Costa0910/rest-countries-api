@@ -5,12 +5,19 @@ const ShowArticle = styled.article`
   align-items: center;
   gap: 6%;
   color: ${(props) => props.mode.text};
+
+  .none-countries-border {
+    font-size: 16px;
+    width: 100%;
+    font-weight: 800;
+  }
   p {
     font-weight: 600;
   }
   span {
     font-weight: 300;
   }
+
   .flag {
     min-width: 500px;
     min-width: 600px;
@@ -19,6 +26,13 @@ const ShowArticle = styled.article`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    -moz-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 2px;
   }
 
   .country-info {

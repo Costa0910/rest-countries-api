@@ -58,7 +58,7 @@ const ShowDetails = ({ country }) => {
               ))}
             </span>
           ) : (
-            <span>none</span>
+            <span className="none-countries-border">none</span>
           )}
         </div>
       </div>

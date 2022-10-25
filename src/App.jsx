@@ -29,7 +29,6 @@ function App() {
       dispatch(setStateOfFetching({ isLoading, isSuccess, isError, error }));
       dispatch(setCountriesToStore(organizedData));
       dispatch(getStartData());
-      console.log("done");
     }
   }, [isLoading]);
 

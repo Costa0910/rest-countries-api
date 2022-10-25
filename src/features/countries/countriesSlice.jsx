@@ -16,7 +16,6 @@ export const countriesSlice = createSlice({
   initialState,
   reducers: {
     setCountriesToStore: (state, { payload }) => {
-      console.log("accepted");
       state.allCountries = payload;
     },
     setStateOfFetching: (state, { payload }) => {
