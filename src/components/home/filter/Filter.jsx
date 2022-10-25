@@ -1,5 +1,6 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import SelectStyle from "./filter-style";
+import { filterByRegion } from "../../../features/countries/countriesSlice";
 import Select from "react-select";
 import { options } from "./data";
 import { customStyles } from "./custumStyle";
@@ -9,8 +10,9 @@ const Filter = () => {
     (state) => state.theme
   );
 
+  const dispatch = useDispatch();
   function handleChange(e) {
-    console.log(e.value);
+    dispatch(filterByRegion(e.value));
   }
   return (
     <SelectStyle mode={witchMode ? { ...darkMode } : { ...lightMode }}>

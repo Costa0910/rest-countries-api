@@ -12,7 +12,8 @@ const ShowArticle = styled.article`
     font-weight: 300;
   }
   .flag {
-    width: 600px;
+    min-width: 500px;
+    min-width: 600px;
     height: 350px;
     background: url(${(props) => props.bg});
     background-size: cover;
@@ -60,11 +61,11 @@ const ShowArticle = styled.article`
       .item {
         background: ${(props) => props.mode.elements};
         min-width: 100px;
-        height: 20px;
+        min-height: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 5px;
+        padding: 2px 5px;
         -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
         -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;

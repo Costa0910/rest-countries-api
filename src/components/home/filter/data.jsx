@@ -4,7 +4,7 @@ export const options = [
     label: "Africa",
   },
   {
-    value: "america",
+    value: "americas",
     label: "America",
   },
   {

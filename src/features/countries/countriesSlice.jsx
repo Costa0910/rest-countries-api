@@ -26,10 +26,20 @@ export const countriesSlice = createSlice({
       // get initial 8 countries
       state.countriesToDisplay = state.allCountries.slice(0, 8);
     },
+    filterByRegion: (state, { payload }) => {
+      const region = state.allCountries.filter((country) => {
+        return country.region.toLowerCase() === payload;
+      });
+      state.countriesToDisplay = region;
+    },
   },
 });
 
-export const { setCountriesToStore, setStateOfFetching, getStartData } =
-  countriesSlice.actions;
+export const {
+  setCountriesToStore,
+  setStateOfFetching,
+  getStartData,
+  filterByRegion,
+} = countriesSlice.actions;
 
 export default countriesSlice.reducer;
