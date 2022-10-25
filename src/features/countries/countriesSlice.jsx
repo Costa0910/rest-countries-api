@@ -32,6 +32,14 @@ export const countriesSlice = createSlice({
       });
       state.countriesToDisplay = region;
     },
+
+    searchByName: (state, { payload }) => {
+      const matchCountries = state.allCountries.filter((country) =>
+        country.name.toLowerCase().includes(payload)
+      );
+
+      state.countriesToDisplay = matchCountries;
+    },
   },
 });
 
@@ -40,6 +48,7 @@ export const {
   setStateOfFetching,
   getStartData,
   filterByRegion,
+  searchByName,
 } = countriesSlice.actions;
 
 export default countriesSlice.reducer;

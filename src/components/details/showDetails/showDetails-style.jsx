@@ -57,7 +57,6 @@ const ShowArticle = styled.article`
         align-items: center;
         gap: 0.5rem;
       }
-
       .item {
         background: ${(props) => props.mode.elements};
         min-width: 100px;
