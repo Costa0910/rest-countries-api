@@ -7,6 +7,7 @@ const DetailsSection = styled.section`
   gap: 3rem;
 
   .back {
+    cursor: pointer;
     width: 90px;
     height: 30px;
     display: flex;

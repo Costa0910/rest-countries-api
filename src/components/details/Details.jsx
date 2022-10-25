@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ShowDetails from "./showDetails/ShowDetails";
 import DetailsSection from "./details-style";
 
@@ -9,6 +9,7 @@ function findCountry(id, all) {
 }
 
 const Details = () => {
+  const navigate = useNavigate();
   const { allCountries, countriesToDisplay } = useSelector(
     (state) => state.countriesData
   );
@@ -31,12 +32,16 @@ const Details = () => {
     return <h1>Nothing found, try another country</h1>;
   }
 
+  function handleClick() {
+    navigate(-1);
+  }
+
   return (
     <DetailsSection mode={witchMode ? { ...darkMode } : { ...lightMode }}>
-      <Link to="/" className="back">
+      <div className="back" onClick={handleClick}>
         <span className="material-symbols-outlined">keyboard_backspace</span>
         Back
-      </Link>
+      </div>
       <ShowDetails country={selectedCountry} />
     </DetailsSection>
   );

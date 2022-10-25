@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Form = styled.form`
-    width: 40%;
-    height: 100%;
+  width: 40%;
+  height: 100%;
   label {
     width: 100%;
     height: 100%;
@@ -31,6 +31,11 @@ const Form = styled.form`
       height: 100%;
       text-indent: 2px;
     }
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+    height: 47px;
   }
 `;
 

@@ -29,7 +29,7 @@ const ShowArticle = styled.article`
     .info {
       display: flex;
       align-items: center;
-      gap: 4rem;
+      gap: 3rem;
       p {
         padding-bottom: 0.8rem;
       }
@@ -68,6 +68,51 @@ const ShowArticle = styled.article`
         -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
         -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+      }
+    }
+  }
+
+  /* MEDIA QUERY FOR (TABLET) */
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+    align-items: flex-start;
+    .country-info {
+      margin-top: 1.5rem;
+      gap: 1.5rem;
+    }
+  }
+
+  /* MEDIA QUERY FOR (PHONE) */
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+    gap: 0;
+    .flag {
+      min-width: 100%;
+      min-height: 100%;
+      height: 200px;
+    }
+    .info {
+      flex-direction: column;
+    }
+
+    .main-info {
+      width: 100%;
+    }
+
+    .more-info {
+      width: 100%;
+    }
+
+    .borders-countries {
+      flex-direction: column;
+      p {
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+
+      .container {
+        width: 100%;
       }
     }
   }

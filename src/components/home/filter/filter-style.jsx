@@ -11,6 +11,10 @@ const SelectStyle = styled.div`
   border-radius: 3px;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 640px) {
+    height: 47px;
+  }
 `;
 
 export default SelectStyle;

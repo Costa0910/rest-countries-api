@@ -24,6 +24,11 @@ const NavbarStyle = styled.header`
     gap: 2px;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 640px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 `;
 
 export default NavbarStyle;

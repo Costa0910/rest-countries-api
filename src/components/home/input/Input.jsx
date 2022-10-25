@@ -12,7 +12,6 @@ const Input = () => {
   );
   const [query, setQuery] = useState("");
   const dispatch = useDispatch();
-
   useEffect(() => {
     startTransition(() => {
       // To void rendering all countries 1 time
