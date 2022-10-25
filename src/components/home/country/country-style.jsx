@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const Article = styled.article`
-  /* border: 1px solid green; */
   background: ${(props) => props.mode.elements};
   color: ${(props) => props.mode.text};
   width: 260px;

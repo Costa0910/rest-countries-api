@@ -10,9 +10,7 @@ const Country = ({ country }) => {
       mode={witchMode ? { ...darkMode } : { ...lightMode }}
       bg={country.flag}
     >
-      <div className="flag">
-        {/* <img src={country.flag} alt={`${country.name} flag`} /> */}
-      </div>
+      <div className="flag"></div>
       <div className="details">
         <Link to={`country/${country.id}`}>
           <h2>{country.name}</h2>

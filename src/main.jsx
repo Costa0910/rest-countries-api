@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Error from "./components/error/Error";
 import { allCountries } from "./features/api/apiSlice";
 import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
-import "./index.css";
-import App from "./App";
-import Home from "./components/home/Home";
 import { Provider } from "react-redux";
 import { store } from "../src/app/store";
+import App from "./App";
+import Error from "./components/error/Error";
+import Home from "./components/home/Home";
+import Details from "./components/details/Details";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "country/:countryId",
+        element: <Details />,
       },
     ],
   },
