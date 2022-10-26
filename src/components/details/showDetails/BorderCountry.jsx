@@ -9,7 +9,6 @@ const BorderCountry = ({ country }) => {
     startTransition(() => {
       dispatch(addClickedCountry(country.id));
     });
-    console.log(country.id);
   }
 
   return (
