@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import ShowDetails from "./showDetails/ShowDetails";
 import DetailsSection from "./details-style";
 
 function findCountry(id, all) {
   const country = all.find((country) => country.id === id);
-  return country.name;
+  return { name: country.name, id: country.id };
 }
 
 const Details = () => {

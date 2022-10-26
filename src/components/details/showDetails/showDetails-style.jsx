@@ -26,12 +26,9 @@ const ShowArticle = styled.article`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    -moz-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
     border-radius: 2px;
   }
 
@@ -73,6 +70,7 @@ const ShowArticle = styled.article`
       }
       .item {
         background: ${(props) => props.mode.elements};
+        color: inherit;
         min-width: 100px;
         min-height: 20px;
         display: flex;
@@ -82,6 +80,11 @@ const ShowArticle = styled.article`
         -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
         -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+      }
+
+      .item:hover {
+        background: transparent;
+        text-decoration: underline;
       }
     }
   }

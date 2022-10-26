@@ -39,6 +39,23 @@ export const countriesSlice = createSlice({
 
       state.countriesToDisplay = matchCountries;
     },
+
+    addClickedCountry: (state, { payload }) => {
+      const countryToAdd = state.allCountries.find(
+        (country) => country.id === payload
+      );
+
+      const isAlreadyDisplayed = state.countriesToDisplay.find(
+        (country) => country.id === payload
+      );
+
+      // avoid to display country more than once
+      if (isAlreadyDisplayed) {
+        state.countriesToDisplay = [...state.countriesToDisplay];
+      } else {
+        state.countriesToDisplay = [...state.countriesToDisplay, countryToAdd];
+      }
+    },
   },
 });
 
@@ -48,6 +65,7 @@ export const {
   getStartData,
   filterByRegion,
   searchByName,
+  addClickedCountry,
 } = countriesSlice.actions;
 
 export default countriesSlice.reducer;

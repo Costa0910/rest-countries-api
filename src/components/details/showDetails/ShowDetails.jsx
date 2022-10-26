@@ -53,8 +53,8 @@ const ShowDetails = ({ country }) => {
           <p>Borders Countries:</p>
           {country.borders ? (
             <span className="container">
-              {country.borders.map((name, i) => (
-                <BorderCountry name={name} key={i} />
+              {country.borders.map((countryInBorder, i) => (
+                <BorderCountry country={countryInBorder} key={i} />
               ))}
             </span>
           ) : (
